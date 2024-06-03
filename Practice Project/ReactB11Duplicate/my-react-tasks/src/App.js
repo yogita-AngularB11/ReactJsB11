@@ -17,6 +17,8 @@ import './App.css';
 // import StateInFunctComp from './StateInClassComp/StateInFunctComp';
 import Main from './RoutingTest/Main';
 import ArrayInClassComp from './StateInClassComp/ArrayInClassComponent';
+import ClassCompLifeCycle from './ClassCompLifeCycle/ClassCompLifeCycle';
+import LifeCycleTask from './Assignment310524/LifeCycleTask';
 function App() {
   return (
     <>
@@ -33,10 +35,12 @@ function App() {
        {/* <ParentComponent /> */}
        {/* <WelcomeScreen /> */}
        {/* <StateInClassComp /> */}
-       <ArrayInClassComp />
+       {/* <ArrayInClassComp /> */}
        {/* <WithoutStateInClassComp /> */}
        {/* <CounterComponent /> */}
        {/* <StateInFunctComp /> */}
+       <ClassCompLifeCycle />
+       {/* <LifeCycleTask/> */}
      {/* </React.Fragment> */}
      {/* <Main /> */}
      {/* </div>  */}
