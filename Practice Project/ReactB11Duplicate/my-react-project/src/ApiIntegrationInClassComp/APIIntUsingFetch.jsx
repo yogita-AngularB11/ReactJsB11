@@ -48,8 +48,6 @@ export default class APIIntUsingFetch extends Component {
             ))} 
           </tbody>
         </table>
-
-        
       </>
 
     )

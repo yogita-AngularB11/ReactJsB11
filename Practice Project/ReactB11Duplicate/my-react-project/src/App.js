@@ -4,7 +4,7 @@ import './App.css';
 // import Welcome from './Welcome';
 // import ClassCompBody from './ClassCompBody';
 // import ClassCompBodyTwo from './ClassCompBodyTwo';
-import APIIntUsingFetch from "./ApiIntegrationInClassComp/APIIntUsingFetch";
+import APIIntUsingFetch from "./Task03062024/APIIntUsingFetch";
 {
   /* The following line can be included in your src/index.js or App.js file */
 }
