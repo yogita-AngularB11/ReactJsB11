@@ -3,4 +3,8 @@
     flex-wrap: wrap;
     gap: 1rem;
   }
-  
+  .table-container {
+    width: 80%; /* Adjust this value as needed */
+    margin: 0 auto; /* Centers the container */
+    overflow-x: auto; /* Optional: Adds horizontal scrolling for smaller screens */
+}
