@@ -1,6 +1,7 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import FormAdvanced from './Task110624/FormAdvanced';
 // import Welcome from './Welcome';
 // import ClassCompBody from './ClassCompBody';
 // import ClassCompBodyTwo from './ClassCompBodyTwo';
@@ -9,8 +10,10 @@ import './App.css';
 // import UseEffectHookTask from './Task04062024/UseEffectHookTask';
 
 // import News from './Ashwini/News';
-import Parent from './Task/Parent';
-import ClassForm from './Task100624/ClassForm';
+// import Parent from './Task/Parent';
+// import ClassForm from './Task100624/ClassForm';
+// import ClassFormUncontrolled from './Task110624/ClassFormUncontrolled';
+// import AdvanceFormHandling from './Task110624/AdvanceFormHandling';
 
 
 function App() {
@@ -24,8 +27,11 @@ function App() {
       {/* <UseEffectHookTask /> */}
       {/* <ApiIntFetch /> */}
       {/* <News/> */}
-   {/* <Parent/> */}
-   <ClassForm />
+      {/* <Parent/> */}
+      {/* <ClassForm /> */}
+      {/* <AdvanceFormHandling /> */}
+      {/* <ClassFormUncontrolled /> */}
+      <FormAdvanced />
     </div>
   );
 }

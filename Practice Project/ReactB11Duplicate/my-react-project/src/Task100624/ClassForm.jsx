@@ -8,11 +8,7 @@ export default class ClassForm extends Component {
             email: '',
             password: ''
         }
-        // Bind the context of `this` to the event handler methods
-        this.handleUsername = this.handleUsername.bind(this);
-        this.handleEmail = this.handleEmail.bind(this);
-        this.handlePassword = this.handlePassword.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+       
     }
     handleUsername = (event) => {
         console.log('onUsernameChange');
@@ -27,7 +23,6 @@ export default class ClassForm extends Component {
         this.setState({ password: event.target.value });
     }
     handleSubmit = (event) => {
-      
         console.log('onSubmit');
         console.log(`Submitted:Username : ${this.state.username}  Email : ${this.state.email} password: ${this.state.password} `);
         event.preventDefault()
