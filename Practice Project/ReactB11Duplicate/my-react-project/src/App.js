@@ -1,7 +1,8 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import FormAdvanced from './Task110624/FormAdvanced';
+// import FormAdvanced from './Task110624/FormAdvanced';
+import ParentContext from './Task120624/ParentContext';
 // import Welcome from './Welcome';
 // import ClassCompBody from './ClassCompBody';
 // import ClassCompBodyTwo from './ClassCompBodyTwo';
@@ -31,7 +32,8 @@ function App() {
       {/* <ClassForm /> */}
       {/* <AdvanceFormHandling /> */}
       {/* <ClassFormUncontrolled /> */}
-      <FormAdvanced />
+      {/* <FormAdvanced /> */}
+      <ParentContext />
     </div>
   );
 }
