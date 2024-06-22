@@ -1,6 +1,8 @@
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
+// import CounterInterview from './Assignment250524/CounterInterview';
 // import Welcome from './Welcome';
 // import FunctionalComponentOne from './FunctionalComponentOne';
 // import FunctionalComponentTwo from './FunctionalComponentTwo';
@@ -8,42 +10,73 @@ import './App.css';
 // import ClassCompBodyTwo from './ClassCompBodyTwo';
 // import FragmentTest from './FragmentTest/FragmentTest';
 // import FragmentTest1 from './FragmentTest/FragmentTest1';
+// import ConditionalRendering from './ConditionalRendering/ConditionalRendering';
+// import ConditionalRendering2 from './ConditionalRendering/ConditionalRendering2';
 // import WelcomeCompCall from './ComponentCall/WelcomeCompCall';
 // import WelcomeScreen from './Assignment2405/WelcomeScreen';
 // import ParentComponent from './Assignment2305/ParentComponent';
-// import StateInClassComp from './StateInClassComp/StateInClassComp';
-// import CounterComponent from './Assignement250524/CounterComponent';
 // import WithoutStateInClassComp from './StateInClassComp/WithoutStateInClassComp';
+// import StateInClassComp from './StateInClassComp/StateInClassComp';
+// import CounterComponent from './Assignment250524/CounterComponent';
 // import StateInFunctComp from './StateInClassComp/StateInFunctComp';
-import Main from './RoutingTest/Main';
-import ArrayInClassComp from './StateInClassComp/ArrayInClassComponent';
-import ClassCompLifeCycle from './ClassCompLifeCycle/ClassCompLifeCycle';
-import LifeCycleTask from './Assignment310524/LifeCycleTask';
+// import Main from './RoutingTest/Main';
+// import ArrayInClassComp from './StateInClassComp/ArrayInClassComponent';
+// import ClassCompLifeCycle from './ClassCompLifeCycle/ClassCompLifeCycle';
+// import LifeCycleTask from './Assignment310524/LifeCycleTask';
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import EmployeeList from './CRUD_Using_ContextAPI/EmployeeList';
+// import AddEmployee from './CRUD_Using_ContextAPI/AddEmployee';
+// import EditEmployee from './CRUD_Using_ContextAPI/EditEmployee';
+// import { EmployeeProvider } from './CRUD_Using_ContextAPI/EmployeeProvider';
+import UseEffectHook from './UseEffectHook/UseEffectHook';
+// import UseEffectHook1 from './UseEffectHook/UseEffectHook1';
+// import UseEffectHook2 from './UseEffectHook/UseEffectHook2';
+
+
 function App() {
   return (
     <>
-     {/* <div> */}
+      {/*<div id='App'>*/}
       {/* <React.Fragment> */}
-      {/* <Welcome />
-      <ClassCompBodyOne />
-      <ClassCompBodyTwo />
-      <FunctionalComponentOne />
-      <FunctionalComponentTwo />
-       <FragmentTest/> 
-       <FragmentTest1 /> */}
-       {/* <WelcomeCompCall/> */}
-       {/* <ParentComponent /> */}
-       {/* <WelcomeScreen /> */}
-       {/* <StateInClassComp /> */}
-       {/* <ArrayInClassComp /> */}
-       {/* <WithoutStateInClassComp /> */}
-       {/* <CounterComponent /> */}
-       {/* <StateInFunctComp /> */}
-       <ClassCompLifeCycle />
-       {/* <LifeCycleTask/> */}
-     {/* </React.Fragment> */}
-     {/* <Main /> */}
-     {/* </div>  */}
+      {/* <Welcome /> */}
+      {/* <ClassCompBodyOne /> */}
+      {/* <ClassCompBodyTwo /> */}
+      {/* <FunctionalComponentOne /> */}
+      {/* <FunctionalComponentTwo /> */}
+      {/* <FragmentTest /> */}
+      {/* <FragmentTest1 />  */}
+      {/* <WelcomeCompCall/> */}
+      {/* <ParentComponent /> */}
+      {/* <WelcomeScreen /> */}
+      {/* <ConditionalRendering/> */}
+      {/* <ConditionalRendering2/> */}
+      {/* <StateInClassComp /> */}
+      {/* <ArrayInClassComp /> */}
+      {/* <WithoutStateInClassComp /> */}
+      {/* <CounterComponent/> */}
+      {/* <CounterInterview/> */}
+      {/* <StateInFunctComp /> */}
+      {/* <ClassCompLifeCycle /> */}
+      {/* <LifeCycleTask/> */}
+      <UseEffectHook/>
+      {/* <UseEffectHook1/> */}
+      {/* <UseEffectHook2/> */}
+      {/* </React.Fragment> */}
+      {/* <Main /> */}
+      
+      
+      {/* <EmployeeProvider>
+      <BrowserRouter>
+          <Routes>
+            <Route exact path='/' element={<EmployeeList />}></Route>
+            <Route exact path='/addEmployee' element={<AddEmployee />}></Route>
+            <Route exact path='/editEmployee' element={<EditEmployee />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </EmployeeProvider> */}
+      
+
+      {/* </div> */}
     </>
   );
 }

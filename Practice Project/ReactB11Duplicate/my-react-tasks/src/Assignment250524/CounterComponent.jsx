@@ -11,22 +11,29 @@ export default class CounterComponent extends Component {
     }
     incrementCounter() {
         console.log("Inside increment counter");
+        this.setState({counter: this.state.counter + 1},() => {
+                    console.log(this.state.counter);
+                })
+        this.setState({counter: this.state.counter + 1},() => {
+                    console.log(this.state.counter);
+                })
+        this.setState({counter: this.state.counter + 1},() => {
+                    console.log(this.state.counter);
+                })
 
-
-        this.setState(
-            (prevState) => ({
-                counter: prevState.counter + 1
-            }), 
-            () => {
-                console.log(this.state.counter);
-            }
-        );
+        // this.setState(
+        //     {counter: this.state.counter + 1},
+        //     () => {
+        //         console.log(this.state.counter);
+        //     }
+        // );
     }
     render() {
         return (
             <div>
                 <h1>State In Class Component</h1>
                 <h3>Current Count: {this.state.counter}</h3>
+                
                 <button onClick={this.incrementCounter}>Count++</button>
             </div>
         )

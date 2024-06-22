@@ -4,6 +4,7 @@ class WithoutStateInClassComp extends Component {
     constructor(props) {
         super(props);
         this.user = "Guest";
+        this.changeUser=this.changeUser.bind(this)
     }
 
     changeUser() {
