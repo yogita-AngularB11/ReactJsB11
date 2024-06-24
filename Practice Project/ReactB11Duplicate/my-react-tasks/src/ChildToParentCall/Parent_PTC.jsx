@@ -1,11 +1,25 @@
 import React, { Component } from 'react'
+import Child_PTC from './Child_PTC';
 
-export default class Parent_PTC extends Component {
+ class Parent_PTC extends Component {
+
+    constructor(){
+        super();
+
+        this.state = {
+            message : 'Parent to Child Data'
+        }
+    }
+
   render() {
     return (
-      <div>
-        
-      </div>
+
+      <>    
+            <h1>Parent To Child Data Parent Component</h1>
+            <Child_PTC data = {this.state.message} />
+      </>
     )
   }
 }
+
+export default Parent_PTC;
