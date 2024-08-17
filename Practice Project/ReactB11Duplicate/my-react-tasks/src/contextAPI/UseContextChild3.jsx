@@ -1,14 +1,15 @@
+
 import React, { useContext } from 'react'
-import myContext from './MyContext'
+import MyContext from './MyContext'
 
 const UseContextChild3 = () => {
 
-    const message = useContext(myContext)
+    const {welcomeMsg} = useContext(MyContext)
 
   return (
     <>
       <h4>In UseContextChild3</h4>
-      <p>{message}</p>
+      <p>{welcomeMsg}</p>
     </>
   )
 }

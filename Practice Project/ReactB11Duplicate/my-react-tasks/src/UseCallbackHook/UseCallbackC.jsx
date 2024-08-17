@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from 'react'
 
 const UseCallbackC = ({number1, number2, count}) => {
-    
     const[sum1, setSum] = useState(0)
 
     const test = ()=>{

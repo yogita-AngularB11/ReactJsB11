@@ -2,6 +2,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
+// import MyUseCallbackHook from './UseCallbackHook/MyUseCallbackHook';
+import MyComponent from './UseCallbackHook/MyComponent';
+// import ParentCallback from './UseCallbackTest/ParentCallback';
+// import FilterComponent from './Project/FilterComponent';
+
+// import UseMemoParent from './useMemoTest/UseMemoParent';
+// import UserProfile from './Practice/UserProfile';
+// import UseMemoParent from './MemoTest/UseMemoParent';
+// import UseRefHookInForm from './useRefHookAdvFormHandling/UseRefHookInFor';
+// import UseRefHookInClassCompForm from './useRefHookAdvFormHandling/UseRefHookInClassCompForm';
 // import CounterInterview from './Assignment250524/CounterInterview';
 // import Welcome from './Welcome';
 // import FunctionalComponentOne from './FunctionalComponentOne';
@@ -28,14 +38,16 @@ import './App.css';
 // import AddEmployee from './CRUD_Using_ContextAPI/AddEmployee';
 // import EditEmployee from './CRUD_Using_ContextAPI/EditEmployee';
 // import { EmployeeProvider } from './CRUD_Using_ContextAPI/EmployeeProvider';
-import UseEffectHook from './UseEffectHook/UseEffectHook';
+// import UseEffectHook from './UseEffectHook/UseEffectHook';
 // import UseEffectHook1 from './UseEffectHook/UseEffectHook1';
 // import UseEffectHook2 from './UseEffectHook/UseEffectHook2';
+
 
 
 function App() {
   return (
     <>
+    {/* <FilterComponent/> */}
       {/*<div id='App'>*/}
       {/* <React.Fragment> */}
       {/* <Welcome /> */}
@@ -58,13 +70,23 @@ function App() {
       {/* <StateInFunctComp /> */}
       {/* <ClassCompLifeCycle /> */}
       {/* <LifeCycleTask/> */}
-      <UseEffectHook/>
+      {/* <UseEffectHook/> */}
       {/* <UseEffectHook1/> */}
       {/* <UseEffectHook2/> */}
       {/* </React.Fragment> */}
       {/* <Main /> */}
-      
-      
+      {/* <UseRefHookInForm/> */}
+      {/* <UseRefHookInClassCompForm/> */}
+     {/* <MemoParent/> */}
+     {/* <UseMemoParent/> */}
+     {/* <UserProfile name="John Doe" age={30} />
+     <UserProfile name="John Doe" age={30} />
+     <UserProfile name="Jane Smith" age={25} />
+     <UserProfile name="Jane " age={5} />
+     <UserProfile name="Jane " age={5} /> */}
+     {/* <MyUseCallbackHook/> */}
+     <MyComponent/>
+     {/* <ParentCallback/> */}
       {/* <EmployeeProvider>
       <BrowserRouter>
           <Routes>
@@ -74,7 +96,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </EmployeeProvider> */}
-      
+
 
       {/* </div> */}
     </>

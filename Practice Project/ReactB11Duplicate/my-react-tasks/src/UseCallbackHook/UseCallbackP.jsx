@@ -5,16 +5,17 @@ const UseCallbackP = () => {
 
     const[count, setCount] = useState(0)
 
-    const incementCount =()=>{
-        setCount(count+1)
+    const incrementCount =()=>{
+        // setCount(count+1)
+        setCount(prevCount=>prevCount+1)
     }
 
   return (
     <>
       <h2>UseCallback Parent</h2>
-    <p>Count : {count} </p> <button onClick={incementCount} >Increment</button>
+    <p>Count : {count} </p> <button onClick={incrementCount} >Increment</button>
 
-    <UseCallbackC number1={10} number2={count} count={count} />
+    <UseCallbackC number1={10} number2={20} count={count} />
 
     </>
   )
