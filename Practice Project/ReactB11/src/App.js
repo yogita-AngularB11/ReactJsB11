@@ -10,6 +10,7 @@ import JavaScript from './componentBasic/JavaScript';
 import MyClassComp from './componentBasic/MyClassComp';
 import UserContextProvider from './ContextAPI/UserContextProvider';
 import Login from './ContextAPI/Login';
+import FuncCompParent from './Props/DestructuringProps/FuncCompParent';
 
 function App() {
   return (
@@ -20,9 +21,10 @@ function App() {
       <ReactJS/>
       <JavaScript/> */}
       {/* <MyClassComp/> */}
-      <UserContextProvider>
-        <Login />
-      </UserContextProvider>
+      {/* <UserContextProvider> */}
+        {/* <Login /> */}
+      {/* </UserContextProvider> */}
+      <FuncCompParent/>
     </>
   );
 }

@@ -2,8 +2,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
+import AddCategory from './video-library/add-category';
+// import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+// import Details from './Details/Details';
+// import FakestoreIndex from './Fakestore-Routing/fakestore-index';
+// import KeyDemo from './KeyDemo';
+// import TimeoutDemo from './TimerEvents/TimeoutDemo';
+// import RegisterUser from './Class-Componennts/RegisterUser';
+// import ConditionalRendering from './Conditional-rendering/ConditionalRendering';
+// import ReducerDemo from './ReducerDemo/ReducerDemo';
+// import HookFormDemo from './Hook-Form-Demo/HookFormDemo';
+// import ContextDemo from './Context-Demo/ContextDemo';
 // import MyUseCallbackHook from './UseCallbackHook/MyUseCallbackHook';
-import MyComponent from './UseCallbackHook/MyComponent';
+// import MyComponent from './UseCallbackHook/MyComponent';
+// import FakeStore from './FakeStore/FakeStore';
 // import ParentCallback from './UseCallbackTest/ParentCallback';
 // import FilterComponent from './Project/FilterComponent';
 
@@ -46,8 +58,62 @@ import MyComponent from './UseCallbackHook/MyComponent';
 
 function App() {
   return (
+    // <div className='container-fluid'>
+    //   <BrowserRouter>
+    //     <header className='bg-dark d-flex p-2 justify-content-around text-white'>
+    //       <div className="fs-4 fw-bold ">Shopper.</div>
+    //       <div className='fs-5'>
+    //         <Link to='/' className='link-light text-decoration-none me-3'>Home</Link>
+    //         <Link to='men' className='link-light text-decoration-none mx-3'>Men's Fashion</Link>
+    //         <Link to='women' className='link-light text-decoration-none mx-3'>Women's Fashion</Link>
+    //         <Link to='kids' className='link-light text-decoration-none'>Kid's Fashion</Link>
+    //       </div>
+    //       <div>
+    //         <span className='bi bi-person-fill'></span>
+    //         <span className='bi bi-heart-fill mx-3'></span>
+    //         <span className='bi bi-cart'></span>
+    //       </div>
+    //     </header>
+    //     <section className='d-flex '>
+    //       <Routes>
+    //         <Route path='/' element={
+    //           <div>
+    //             <h1>Welcome to online shopping</h1>
+    //             <p>Mens | Women | Kids Fashion</p>
+    //           </div>
+    //         } />
+
+    //         <Route path='men' element={
+    //           <div >
+    //             <h3>Men's Fashion</h3>
+    //             <img src='men-fashion.jpeg' alt='mens-pic' width={200} height={200} />
+    //           </div>
+    //         } />
+
+    //         <Route path='women' element={
+    //           <div>
+    //             <h3>Women's Fashion</h3>
+    //             <img src='women-fashion.jpeg' alt='women-pic' width={200} height={200} />
+    //           </div>
+    //         } />
+    //         <Route path='kids' element={
+    //           <div>
+    //             <h3>Kid's Fashion</h3>
+    //             <img src='kids-fashion.jpg' alt='kids-pic' width={200} height={200} />
+    //           </div>
+    //         } />
+    //         {/* Route Parameters Concept */}
+    //         <Route path='details/:id/:name/:price' element={<Details/>}/>
+    //         <Route path='*' element={<div>
+    //           <h3>Looking for something?</h3>
+    //           <code>Opp's...! Unable to find your request</code>
+    //         </div>} />
+    //       </Routes>
+    //     </section>
+    //   </BrowserRouter>
+    //</div>
     <>
-    {/* <FilterComponent/> */}
+      {/* <FilterComponent/> */}
       {/*<div id='App'>*/}
       {/* <React.Fragment> */}
       {/* <Welcome /> */}
@@ -77,16 +143,16 @@ function App() {
       {/* <Main /> */}
       {/* <UseRefHookInForm/> */}
       {/* <UseRefHookInClassCompForm/> */}
-     {/* <MemoParent/> */}
-     {/* <UseMemoParent/> */}
-     {/* <UserProfile name="John Doe" age={30} />
+      {/* <MemoParent/> */}
+      {/* <UseMemoParent/> */}
+      {/* <UserProfile name="John Doe" age={30} />
      <UserProfile name="John Doe" age={30} />
      <UserProfile name="Jane Smith" age={25} />
      <UserProfile name="Jane " age={5} />
      <UserProfile name="Jane " age={5} /> */}
-     {/* <MyUseCallbackHook/> */}
-     <MyComponent/>
-     {/* <ParentCallback/> */}
+      {/* <MyUseCallbackHook/> */}
+      {/* <MyComponent/> */}
+      {/* <ParentCallback/> */}
       {/* <EmployeeProvider>
       <BrowserRouter>
           <Routes>
@@ -95,10 +161,18 @@ function App() {
             <Route exact path='/editEmployee' element={<EditEmployee />}></Route>
           </Routes>
         </BrowserRouter>
-      </EmployeeProvider> */}
-
-
+      </EmployeeProvider> 
       {/* </div> */}
+      {/* <FakeStore/> */}
+      {/* <HookFormDemo/> */}
+      {/* <ContextDemo/> */}
+      {/* <ConditionalRendering/> */}
+      {/* <ReducerDemo/> */}
+      {/* <RegisterUser/> */}
+      {/* <KeyDemo/> */}
+      {/* <TimeoutDemo/> */}
+      {/* <FakestoreIndex /> */}
+      <AddCategory/>
     </>
   );
 }

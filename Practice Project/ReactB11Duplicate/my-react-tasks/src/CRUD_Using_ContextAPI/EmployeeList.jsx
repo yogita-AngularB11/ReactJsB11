@@ -26,7 +26,7 @@ const EmployeeList = () => {
           <th>SR NO</th>
           <th>EMP ID</th>
           <th>EMP NAME</th>
-          <th>POSTION</th>
+          <th>POSITION</th>
           <th>COMPANY</th>
           <th>Actions</th>
         </tr>
