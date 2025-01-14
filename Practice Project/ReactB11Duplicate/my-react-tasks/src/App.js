@@ -2,7 +2,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
-import AddCategory from './video-library/add-category';
+import FakestoreCarousel from './fakestore-carousel/fakestore-carousel';
+// import AddCategory from './video-library/add-category';
 // import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 // import Details from './Details/Details';
 // import FakestoreIndex from './Fakestore-Routing/fakestore-index';
@@ -163,6 +164,7 @@ function App() {
         </BrowserRouter>
       </EmployeeProvider> 
       {/* </div> */}
+      <FakestoreCarousel/>
       {/* <FakeStore/> */}
       {/* <HookFormDemo/> */}
       {/* <ContextDemo/> */}
@@ -172,7 +174,7 @@ function App() {
       {/* <KeyDemo/> */}
       {/* <TimeoutDemo/> */}
       {/* <FakestoreIndex /> */}
-      <AddCategory/>
+      {/* <AddCategory/> */}
     </>
   );
 }
