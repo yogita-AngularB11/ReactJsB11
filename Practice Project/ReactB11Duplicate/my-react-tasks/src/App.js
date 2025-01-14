@@ -2,7 +2,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
-import IntervalDemo from './interval-demo/interval-demo';
+// import IntervalDemo from './interval-demo/interval-demo';
+import FormDemo from './form-demo/form-demo';
 // import FakestoreCarousel from './fakestore-carousel/fakestore-carousel';
 // import AddCategory from './video-library/add-category';
 // import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
@@ -166,7 +167,8 @@ function App() {
       </EmployeeProvider> 
       {/* </div> */}
       {/* <FakestoreCarousel/> */}
-      <IntervalDemo/>
+      {/* <IntervalDemo /> */}
+      <FormDemo/>
       {/* <FakeStore/> */}
       {/* <HookFormDemo/> */}
       {/* <ContextDemo/> */}
