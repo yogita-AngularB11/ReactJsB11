@@ -42,7 +42,7 @@ const FakestoreCarousel = () => {
         LoadProduct(count.current)
     }
 
-    //click play button-->handle-play-click-->need toa load function into mem and release into process after few seconds
+    //click play button-->handle-play-click-->need to load function into mem and release into process after few seconds
     function handlePlayClick() {
         thread.current = setInterval(LoadProductAuto, 3000)
         setStatus('Slideshow Mode')
