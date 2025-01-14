@@ -2,8 +2,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
+import FormikValidationsDemo from './formik-validation/formik-validations';
 // import IntervalDemo from './interval-demo/interval-demo';
-import FormDemo from './form-demo/form-demo';
+// import FormDemo from './form-demo/form-demo';
+// import FormikDemo from './formik-demo/formik-demo';
 // import FakestoreCarousel from './fakestore-carousel/fakestore-carousel';
 // import AddCategory from './video-library/add-category';
 // import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
@@ -168,7 +170,9 @@ function App() {
       {/* </div> */}
       {/* <FakestoreCarousel/> */}
       {/* <IntervalDemo /> */}
-      <FormDemo/>
+      {/* <FormDemo/> */}
+      {/* <FormikDemo /> */}
+      <FormikValidationsDemo/>
       {/* <FakeStore/> */}
       {/* <HookFormDemo/> */}
       {/* <ContextDemo/> */}
