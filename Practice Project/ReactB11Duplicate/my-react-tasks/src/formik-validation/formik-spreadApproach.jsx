@@ -1,7 +1,6 @@
 import { useFormik } from "formik";
 import * as yup from "yup"
-const YupValidationSchema = () => {
-  
+const FormikSpreadApproach = () => {
 
     const formik = useFormik({
         // you must use same values as you have mentioned in name of element
@@ -11,7 +10,7 @@ const YupValidationSchema = () => {
             City: '-1',
             Mobile: ''
         },
-       
+        
         validationSchema: yup.object({
             UserName: yup.string().required('UserName is Required').min(4, 'Name too short'),
             Age: yup.number().required('Age Required').min(18, 'Age min 18').max(60, 'Age max 60'),
@@ -29,16 +28,16 @@ const YupValidationSchema = () => {
                 <h3>Register</h3>
                 <dl>
                     <dt>UserName</dt>
-                    <dd><input type="text" name="UserName" onBlur={formik.handleBlur} onChange={formik.handleChange} /></dd>
+                    <dd><input type="text" name="UserName" {...formik.getFieldProps("UserName")}/></dd>
                     <dd className='text-danger'>{formik.errors.UserName}</dd>
 
                     <dt>Age</dt>
-                    <dd><input type="text" name="Age" onBlur={formik.handleBlur} onChange={formik.handleChange} /></dd>
+                    <dd><input type="text" name="Age"  {...formik.getFieldProps("Age")}/></dd>
                     <dd className='text-danger'>{formik.errors.Age}</dd>
 
                     <dt>City</dt>
                     <dd>
-                        <select name="City" onBlur={formik.handleBlur} onChange={formik.handleChange}>
+                        <select name="City" {...formik.getFieldProps("City")} >
                             <option value="-1">Select City</option>
                             <option value="Pandharpur">Pandharpur</option>
                             <option value="Pune">Pune</option>
@@ -48,7 +47,7 @@ const YupValidationSchema = () => {
                     <dd className='text-danger'>{formik.errors.City}</dd>
 
                     <dt>Mobile</dt>
-                    <dd><input type="number" name="Mobile" onBlur={formik.handleBlur} onChange={formik.handleChange} /></dd>
+                    <dd><input type="text" name="Mobile" {...formik.getFieldProps("Mobile")}/></dd>
                     <dd className='text-danger'>{formik.errors.Mobile}</dd>
                 </dl>
                 <button type="submit" >Submit</button>
@@ -56,4 +55,4 @@ const YupValidationSchema = () => {
         </div>
     )
 }
-export default YupValidationSchema
+export default FormikSpreadApproach
