@@ -37,16 +37,16 @@ const YupValidationSchema = () => {
             <form onSubmit={formik.handleSubmit}>
                 <dl>
                     <dt>UserName</dt>
-                    <dd><input type="text" name="UserName" onChange={formik.handleChange} /></dd>
+                    <dd><input type="text" name="UserName" onBlur={formik.handleBlur} onChange={formik.handleChange} /></dd>
                     <dd className='text-danger'>{formik.errors.UserName}</dd>
 
                     <dt>Age</dt>
-                    <dd><input type="text" name="Age" onChange={formik.handleChange} /></dd>
+                    <dd><input type="text" name="Age" onBlur={formik.handleBlur} onChange={formik.handleChange} /></dd>
                     <dd className='text-danger'>{formik.errors.Age}</dd>
 
                     <dt>City</dt>
                     <dd>
-                        <select name="City" onChange={formik.handleChange}>
+                        <select name="City" onBlur={formik.handleBlur} onChange={formik.handleChange}>
                             <option value="-1">Select City</option>
                             <option value="Pandharpur">Pandharpur</option>
                             <option value="Pune">Pune</option>
@@ -56,7 +56,7 @@ const YupValidationSchema = () => {
                     <dd className='text-danger'>{formik.errors.City}</dd>
 
                     <dt>Mobile</dt>
-                    <dd><input type="number" name="Mobile" onChange={formik.handleChange} /></dd>
+                    <dd><input type="number" name="Mobile" onBlur={formik.handleBlur} onChange={formik.handleChange} /></dd>
                     <dd className='text-danger'>{formik.errors.Mobile}</dd>
                 </dl>
                 <button type="submit" >Submit</button>
