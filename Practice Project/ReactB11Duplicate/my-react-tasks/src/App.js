@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
 // import FormikSpreadApproach from './formik-validation/formik-spreadApproach';
-import FormikComponent from './FormikComponent/FormikComponent';
+// import FormikComponent from './FormikComponent/FormikComponent';
+import FormStateValidation from './Form-state-validation/FormStateValidation';
 // import FormikValidationsDemo from './formik-validation/formik-validations';
 // import YupValidationSchema from './formik-yupValidationSchema/yup-validationSchema';
 // import IntervalDemo from './interval-demo/interval-demo';
@@ -178,7 +179,8 @@ function App() {
       {/* <FormikValidationsDemo/> */}
       {/* <YupValidationSchema/> */}
       {/* <FormikSpreadApproach/> */}
-      <FormikComponent/>
+      {/* <FormikComponent/> */}
+      <FormStateValidation/>
       {/* <FakeStore/> */}
       {/* <HookFormDemo/> */}
       {/* <ContextDemo/> */}
