@@ -2,9 +2,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
+// import HookFormDemo from './Hook-Form-Demo/HookFormDemo';
 // import FormikSpreadApproach from './formik-validation/formik-spreadApproach';
 // import FormikComponent from './FormikComponent/FormikComponent';
-import FormStateValidation from './Form-state-validation/FormStateValidation';
+// import FormStateValidation from './Form-state-validation/FormStateValidation';
 // import FormikValidationsDemo from './formik-validation/formik-validations';
 // import YupValidationSchema from './formik-yupValidationSchema/yup-validationSchema';
 // import IntervalDemo from './interval-demo/interval-demo';
@@ -20,11 +21,10 @@ import FormStateValidation from './Form-state-validation/FormStateValidation';
 // import RegisterUser from './Class-Componennts/RegisterUser';
 // import ConditionalRendering from './Conditional-rendering/ConditionalRendering';
 // import ReducerDemo from './ReducerDemo/ReducerDemo';
-// import HookFormDemo from './Hook-Form-Demo/HookFormDemo';
 // import ContextDemo from './Context-Demo/ContextDemo';
 // import MyUseCallbackHook from './UseCallbackHook/MyUseCallbackHook';
 // import MyComponent from './UseCallbackHook/MyComponent';
-// import FakeStore from './FakeStore/FakeStore';
+import FakeStore from './FakeStore/FakeStore';
 // import ParentCallback from './UseCallbackTest/ParentCallback';
 // import FilterComponent from './Project/FilterComponent';
 
@@ -180,9 +180,9 @@ function App() {
       {/* <YupValidationSchema/> */}
       {/* <FormikSpreadApproach/> */}
       {/* <FormikComponent/> */}
-      <FormStateValidation/>
-      {/* <FakeStore/> */}
-      {/* <HookFormDemo/> */}
+      {/* <FormStateValidation/> */}
+      {/*<HookFormDemo/>*/}
+      <FakeStore/>
       {/* <ContextDemo/> */}
       {/* <ConditionalRendering/> */}
       {/* <ReducerDemo/> */}
