@@ -65,8 +65,18 @@ const FakeStore = () => {
     };
 
     const handleSearchClick = () => {
-        loadProducts(`https://fakestoreapi.com/products/category/${searchString}`)
+        // loadProducts(`https://fakestoreapi.com/products/category/${searchString}`)
+        const matchedProducts = products.filter((product) =>
+            product.title.toLowerCase().includes(searchString)
+        );
+    
+        if (matchedProducts.length > 0) {
+            setProducts(matchedProducts); // Update displayed products with matches
+        } else {
+            alert("No products found with the given title.");
+        }
     };
+    
 
     useEffect(() => {
         loadCategories();
