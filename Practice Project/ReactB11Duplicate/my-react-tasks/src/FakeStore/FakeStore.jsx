@@ -21,6 +21,7 @@ const FakeStore = () => {
     // const [cartCount, setCartCount] = useState(cartItems.length)
     const [cartCount, setCartCount] = useState()
     const [searchString, setSearchString] = useState('')
+    const [rating, setRating] = useState(1); 
 
     function loadCategories() {
         axios.get("https://fakestoreapi.com/products/categories").then(response => {
@@ -69,14 +70,21 @@ const FakeStore = () => {
         const matchedProducts = products.filter((product) =>
             product.title.toLowerCase().includes(searchString)
         );
-    
+
         if (matchedProducts.length > 0) {
             setProducts(matchedProducts); // Update displayed products with matches
         } else {
             alert("No products found with the given title.");
         }
     };
-    
+
+    const handleRatingChange = (e) => {
+        // setRating(e.target.value); // Update the rating state
+        axios.get(`https://fakestoreapi.com/products`)
+            .then(response => {
+                setProducts(response.data.filter(product=>product.rating.rate>e.target.value))
+            })
+      };
 
     useEffect(() => {
         loadCategories();
@@ -155,9 +163,10 @@ const FakeStore = () => {
                 </div>
             </header >
             <section className='mt-3 row'>
+                {/* 1-Category Dropdown */}
                 <nav className='col-2'>
                     <div>
-                        <label className='form-label'>Select Category</label>
+                        <label className='form-label fw-bold'>Select Category</label>
                         <div>
                             <select onChange={handleCategoryChange} className='form-select'>
                                 {
@@ -166,6 +175,22 @@ const FakeStore = () => {
                             </select>
                         </div>
                     </div>
+                    {/* 2-a track bar to filter the product based on price */}
+                    <div className="my-3">
+                        <label className='fw-bold'>Rating</label>
+                        <div>
+                        1<span className='bi bi-star-fill text-success'></span> <input type="range" min={1} max={5}  onChange={handleRatingChange } step="0.5" className='form-input-control'/> 5<span className='bi bi-star-fill text-success' ></span>
+                        </div>
+                    </div>
+                    <label className='fw-bold'>Price</label>
+                    <ul className='list-unstyled'>
+                        <li>Under 50</li>
+                        <li>50-100</li>
+                        <li>100-200</li>
+                        <li>Above 200</li>
+                    </ul>
+                    <div className='my-3'
+                    ></div>
                 </nav>
                 <main className='col-10 d-flex flex-wrap overflow-auto' style={{ height: '600px' }}>
                     {
