@@ -25,6 +25,7 @@ import './App.css';
 // import MyUseCallbackHook from './UseCallbackHook/MyUseCallbackHook';
 // import MyComponent from './UseCallbackHook/MyComponent';
 import FakeStore from './FakeStore/FakeStore';
+// import Fakestore1 from './FakeStore/Fakestore1';
 // import ParentCallback from './UseCallbackTest/ParentCallback';
 // import FilterComponent from './Project/FilterComponent';
 

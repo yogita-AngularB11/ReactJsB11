@@ -20,6 +20,7 @@ const FakeStore = () => {
     const [cartItems, setCartItems] = useState([]);
     // const [cartCount, setCartCount] = useState(cartItems.length)
     const [cartCount, setCartCount] = useState()
+    const [searchString, setSearchString] = useState('')
 
     function loadCategories() {
         axios.get("https://fakestoreapi.com/products/categories").then(response => {
@@ -48,10 +49,24 @@ const FakeStore = () => {
                 getCartCount();
             })
     }
+    function handleDeleteClick(id) {
+        // alert(id)
+        const index = cartItems.findIndex(user => user.id === id);
+        cartItems.splice(index, 1);
+        getCartCount();
+    }
 
     function getCartCount() {
         setCartCount(cartItems.length)
     }
+
+    const handleInputChange = (e) => {
+        setSearchString(e.target.value.toLowerCase()); // Update the search string in state
+    };
+
+    const handleSearchClick = () => {
+        loadProducts(`https://fakestoreapi.com/products/category/${searchString}`)
+    };
 
     useEffect(() => {
         loadCategories();
@@ -61,14 +76,15 @@ const FakeStore = () => {
 
     return (
         <div className="container-fluid">
-            <header className="d-flex justify-content-between fs-6 p-2 border mt-2 bg-dark text-light">
+            <header className="d-flex justify-content-between fs-6 p-2 border bg-primary text-light">
                 <div>
                     <span className="fs-4">FakeStore</span>
                 </div>
+                {/* search bar -search product based on category */}
                 <div>
                     <div className='input-group'>
-                        <input type="text" placeholder='Search by category' className='form-control' />
-                        <button className='btn btn-warning bi bi-search'></button>
+                        <input type="text" placeholder='Search by category' onChange={handleInputChange} className='form-control' />
+                        <button className='btn btn-warning bi bi-search' onClick={handleSearchClick}></button>
                     </div>
                 </div>
                 <nav>
@@ -106,16 +122,28 @@ const FakeStore = () => {
                                                     <td>{item.title}</td>
                                                     <td><img src={item.image} width="50" height="50" alt="" /></td>
                                                     <td>{item.price}</td>
+                                                    <td><button className='bi bi-trash btn btn-danger' onClick={() => { handleDeleteClick(item.id) }}></button></td>
                                                 </tr>)
                                         }
                                     </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th colSpan="2">Total Amount</th>
+                                            <th>
+                                                {
+                                                    cartItems.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0).toFixed(2)
+                                                }
+                                            </th>
+                                        </tr>
+                                    </tfoot>
+
                                 </table></div>
-                            <div className="modal-footer"></div>
+
                         </div>
                     </div>
 
                 </div>
-            </header>
+            </header >
             <section className='mt-3 row'>
                 <nav className='col-2'>
                     <div>
@@ -132,7 +160,7 @@ const FakeStore = () => {
                 <main className='col-10 d-flex flex-wrap overflow-auto' style={{ height: '600px' }}>
                     {
                         products.map(product =>
-                            <div key={product.id} className='card p-2 m-2' style={{ width: '200px', height: '400px' }}>
+                            <div key={product.id} className='card p-2 m-2' style={{ width: '200px' }}>
                                 <img src={product.image} className='card-img-top' height="120px" alt="" />
                                 <div className='card-header' style={{ height: '125px' }}>
                                     {product.title}
@@ -158,7 +186,7 @@ const FakeStore = () => {
                     }
                 </main>
             </section>
-        </div>
+        </div >
     )
 }
 
