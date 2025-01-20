@@ -29,6 +29,12 @@ export const ChildComponent2 = () => {
 
 const ContextDemo = () => {
     const [msg, setMsg] = useState('Yogita')
+// this value of parent I want to share it to child.
+// the state i created for parent I want to use for child
+// is it possible to access the state of a component by its child component? Child component running inside parents memory? 
+// not possible.state is for the component that you configured.it will work only for that component.
+// it is not accessible even to Child component running inside parents memory
+
     function handleNameChange(e) {
         setMsg(e.target.value)
     }
@@ -37,6 +43,7 @@ const ContextDemo = () => {
             {/* scope of context is parent that means in parent can access level 1  child component */}
             <UserContext.Provider value={msg}>
                 <h1>Parent Component <input type=" " onChange={handleNameChange} /></h1>
+                {/* we want child component to use inside parent */}
                 <ChildComponent1 />
             </UserContext.Provider>
 
