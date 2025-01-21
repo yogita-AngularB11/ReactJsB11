@@ -23,7 +23,7 @@ export const EmployeeProvider = ({ children }) => {
     }
     
     return (
-        <EmployeeContext.Provider value={{ employee, addEmployee, editEmployee }}>
+        <EmployeeContext.Provider value={{ employee, addEmployee, editEmployee,deleteEmployee }}>
             {children}
         </EmployeeContext.Provider>
 

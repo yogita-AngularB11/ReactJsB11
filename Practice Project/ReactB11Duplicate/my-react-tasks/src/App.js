@@ -19,12 +19,12 @@ import './App.css';
 // import KeyDemo from './KeyDemo';
 // import TimeoutDemo from './TimerEvents/TimeoutDemo';
 // import RegisterUser from './Class-Componennts/RegisterUser';
-// import ConditionalRendering from './Conditional-rendering/ConditionalRendering';
+import ConditionalRendering from './Conditional-rendering/ConditionalRendering';
 // import ReducerDemo from './ReducerDemo/ReducerDemo';
 // import ContextDemo from './Context-Demo/ContextDemo';
 // import MyUseCallbackHook from './UseCallbackHook/MyUseCallbackHook';
 // import MyComponent from './UseCallbackHook/MyComponent';
-import FakeStore from './FakeStore/FakeStore';
+// import FakeStore from './FakeStore/FakeStore';
 // import Fakestore1 from './FakeStore/Fakestore1';
 // import ParentCallback from './UseCallbackTest/ParentCallback';
 // import FilterComponent from './Project/FilterComponent';
@@ -59,7 +59,10 @@ import FakeStore from './FakeStore/FakeStore';
 // import EmployeeList from './CRUD_Using_ContextAPI/EmployeeList';
 // import AddEmployee from './CRUD_Using_ContextAPI/AddEmployee';
 // import EditEmployee from './CRUD_Using_ContextAPI/EditEmployee';
-// import { EmployeeProvider } from './CRUD_Using_ContextAPI/EmployeeProvider';
+// import { EmployeeProvider } from './CRUD_Using_ContextAPI/EmployeeStore';
+
+// import ControlledDemo from './Custom-components/controlled-demo';
+
 // import UseEffectHook from './UseEffectHook/UseEffectHook';
 // import UseEffectHook1 from './UseEffectHook/UseEffectHook1';
 // import UseEffectHook2 from './UseEffectHook/UseEffectHook2';
@@ -164,14 +167,14 @@ function App() {
       {/* <MyComponent/> */}
       {/* <ParentCallback/> */}
       {/* <EmployeeProvider>
-      <BrowserRouter>
+        <BrowserRouter>
           <Routes>
             <Route exact path='/' element={<EmployeeList />}></Route>
             <Route exact path='/addEmployee' element={<AddEmployee />}></Route>
             <Route exact path='/editEmployee' element={<EditEmployee />}></Route>
           </Routes>
         </BrowserRouter>
-      </EmployeeProvider> 
+      </EmployeeProvider> */}
       {/* </div> */}
       {/* <FakestoreCarousel/> */}
       {/* <IntervalDemo /> */}
@@ -183,15 +186,16 @@ function App() {
       {/* <FormikComponent/> */}
       {/* <FormStateValidation/> */}
       {/*<HookFormDemo/>*/}
-      <FakeStore/>
+      {/* <FakeStore/> */}
       {/* <ContextDemo/> */}
-      {/* <ConditionalRendering/> */}
+      <ConditionalRendering/>
       {/* <ReducerDemo/> */}
       {/* <RegisterUser/> */}
       {/* <KeyDemo/> */}
       {/* <TimeoutDemo/> */}
       {/* <FakestoreIndex /> */}
       {/* <AddCategory/> */}
+      {/* <ControlledDemo/> */}
     </>
   );
 }
