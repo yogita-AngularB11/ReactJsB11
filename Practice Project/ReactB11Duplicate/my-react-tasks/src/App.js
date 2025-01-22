@@ -2,6 +2,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
+import FakeStore from './FakeStore/FakeStore';
+// import StorageDemo from './storage-demo/StorageDemo';
 // import HookFormDemo from './Hook-Form-Demo/HookFormDemo';
 // import FormikSpreadApproach from './formik-validation/formik-spreadApproach';
 // import FormikComponent from './FormikComponent/FormikComponent';
@@ -19,7 +21,7 @@ import './App.css';
 // import KeyDemo from './KeyDemo';
 // import TimeoutDemo from './TimerEvents/TimeoutDemo';
 // import RegisterUser from './Class-Componennts/RegisterUser';
-import ConditionalRendering from './Conditional-rendering/ConditionalRendering';
+// import ConditionalRendering from './Conditional-rendering/ConditionalRendering';
 // import ReducerDemo from './ReducerDemo/ReducerDemo';
 // import ContextDemo from './Context-Demo/ContextDemo';
 // import MyUseCallbackHook from './UseCallbackHook/MyUseCallbackHook';
@@ -186,9 +188,9 @@ function App() {
       {/* <FormikComponent/> */}
       {/* <FormStateValidation/> */}
       {/*<HookFormDemo/>*/}
-      {/* <FakeStore/> */}
+      <FakeStore/>
       {/* <ContextDemo/> */}
-      <ConditionalRendering/>
+      {/* <ConditionalRendering/> */}
       {/* <ReducerDemo/> */}
       {/* <RegisterUser/> */}
       {/* <KeyDemo/> */}
@@ -196,6 +198,7 @@ function App() {
       {/* <FakestoreIndex /> */}
       {/* <AddCategory/> */}
       {/* <ControlledDemo/> */}
+      {/* <StorageDemo/> */}
     </>
   );
 }

@@ -1,6 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useReducer } from 'react';
 import axios from 'axios';
+import { type } from '@testing-library/user-event/dist/type';
 
+let initialState={wishList:0}
+
+function reducer(state,action){
+    switch(action.type){
+        case 'addToWishList':return{wishList:state.wishList+1}
+        case 'removeFromWishList':return{wishList:state.wishList-1}
+    }
+}
 
 const FakeStore = () => {
     const [categories, setCategories] = useState([]);
@@ -22,6 +31,16 @@ const FakeStore = () => {
     const [cartCount, setCartCount] = useState()
     const [searchString, setSearchString] = useState('')
     const [rating, setRating] = useState(1); 
+
+    const[state,dispatch]=useReducer(reducer,initialState);
+
+    function handleWishListClick(){
+        dispatch({type:'addToWishList'})
+    }
+
+    function handleRemoveWishList(){
+        dispatch({type:'removeFromWishList'})
+    }
 
     function loadCategories() {
         axios.get("https://fakestoreapi.com/products/categories").then(response => {
@@ -113,7 +132,10 @@ const FakeStore = () => {
                 </nav>
                 <div>
                     <button className="btn btn-light"><span className="bi bi-person"></span></button>
-                    <button className="btn btn-light mx-2"><span className="bi bi-heart"></span></button>
+                    <button className="btn btn-light  bi bi-heart mx-2 position-relative"><span className="badge bg-danger rounded rounded-circle position-absolute">{state.wishList}</span></button>
+
+
+
                     {/* <button className="btn btn-light"><span className="bi bi-cart"></span></button> */}
                     <button data-bs-toggle="modal" data-bs-target="#cart" className="btn btn-light bi bi-cart position-relative"><span className="badge bg-danger rounded rounded-circle position-absolute">{cartCount}</span></button>
                 </div>
@@ -212,8 +234,10 @@ const FakeStore = () => {
                                         <dd>{product.rating.count}</dd> */}
                                     </dl>
                                 </div>
-                                <div className='card-footer'>
-                                    <button className='btn btn-warning w-100' onClick={() => handleAddToCartClick(product.id)}><span className='bi bi-cart4'></span> Add to Cart</button>
+                                <div className='card-footer d-flex justify-content-between'>
+                                    <button className='btn btn-warning' onClick={() => handleAddToCartClick(product.id)}><span className='bi bi-cart4'></span></button>
+                                    <button onClick={handleWishListClick} className='btn btn-success bi bi-heart mx-2'></button>
+                                    <button onClick={handleRemoveWishList} className='btn btn-danger bi bi-trash'>Wish</button>
                                 </div>
                             </div>
 
