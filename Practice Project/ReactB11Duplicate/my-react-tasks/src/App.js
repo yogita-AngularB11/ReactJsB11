@@ -201,8 +201,8 @@ function App() {
       {/* <AddCategory/> */}
       {/* <ControlledDemo/> */}
       {/* <StorageDemo/> */}
-      <DataBindingClassComp/>
-      {/* <StateInClass/> */}
+      {/* <DataBindingClassComp/> */}
+      <StateInClass/>
     </>
   );
 }
