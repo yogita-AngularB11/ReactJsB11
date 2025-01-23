@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
 import FakeStore from './FakeStore/FakeStore';
+import DataBindingClassComp from './Class-Componennts/dataBinding-classComp';
+import StateInClass from './Class-Componennts/state-in-class';
 // import StorageDemo from './storage-demo/StorageDemo';
 // import HookFormDemo from './Hook-Form-Demo/HookFormDemo';
 // import FormikSpreadApproach from './formik-validation/formik-spreadApproach';
@@ -188,7 +190,7 @@ function App() {
       {/* <FormikComponent/> */}
       {/* <FormStateValidation/> */}
       {/*<HookFormDemo/>*/}
-      <FakeStore/>
+      {/* <FakeStore/> */}
       {/* <ContextDemo/> */}
       {/* <ConditionalRendering/> */}
       {/* <ReducerDemo/> */}
@@ -199,6 +201,8 @@ function App() {
       {/* <AddCategory/> */}
       {/* <ControlledDemo/> */}
       {/* <StorageDemo/> */}
+      <DataBindingClassComp/>
+      {/* <StateInClass/> */}
     </>
   );
 }
