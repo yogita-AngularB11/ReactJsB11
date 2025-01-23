@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 
 export default class RegisterUser extends Component {
-    constructor(){
-        super();
-    }
+
+  constructor(props) {
+    super();
+  }
+
+  
   render() {
     return (
       <div>
