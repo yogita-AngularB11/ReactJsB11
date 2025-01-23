@@ -5,6 +5,7 @@ import './App.css';
 import FakeStore from './FakeStore/FakeStore';
 import DataBindingClassComp from './Class-Componennts/dataBinding-classComp';
 import StateInClass from './Class-Componennts/state-in-class';
+import SetStateAtMount from './Class-Componennts/SetStateAtMount';
 // import StorageDemo from './storage-demo/StorageDemo';
 // import HookFormDemo from './Hook-Form-Demo/HookFormDemo';
 // import FormikSpreadApproach from './formik-validation/formik-spreadApproach';
@@ -202,7 +203,8 @@ function App() {
       {/* <ControlledDemo/> */}
       {/* <StorageDemo/> */}
       {/* <DataBindingClassComp/> */}
-      <StateInClass/>
+      {/* <StateInClass/> */}
+      <SetStateAtMount/>
     </>
   );
 }
