@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Product{
+            name="Samsung TV";
+            price=45000;
+            rating={
+                vendorRating:{
+                    rate:4.8,
+                    count:60
+                },
+                customerRating:{
+                    rate:4.2,
+                    count:300
+                }
+            }
+
+            get vendorRating(){
+                return this.rating.vendorRating.rate
+            }
+        }
+
+        let tv=new Product();
+        // With Accessor 
+        console.log(`Vendor Rating:${tv.vendorRating}`);
+        // Without Accessor 
+        console.log(`Customer Rating: ${tv.rating.customerRating.rate}`);
+        
+    </script>
+</body>
+</html>

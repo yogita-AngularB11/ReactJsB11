@@ -2,11 +2,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import './App.css';
-import FakeStore from './FakeStore/FakeStore';
-import DataBindingClassComp from './Class-Componennts/dataBinding-classComp';
-import StateInClass from './Class-Componennts/state-in-class';
-import SetStateAtMount from './Class-Componennts/SetStateAtMount';
-import ClassAndStyleBinding from './Class-Componennts/ClassAndStyleBinding';
+// import FakeStore from './FakeStore/FakeStore';
+// import DataBindingClassComp from './Class-Components/dataBinding-classComp';
+// import StateInClass from './Class-Components/state-in-class';
+// import SetStateAtMount from './Class-Components/SetStateAtMount';
+// import ClassAndStyleBinding from './Class-Components/ClassAndStyleBinding';
+import EventMethodBindingError from './Class-Components/Event-MethodBinding-Error';
+// import EventMethodBinding from './Class-Components/Event-MethodBinding';
 // import StorageDemo from './storage-demo/StorageDemo';
 // import HookFormDemo from './Hook-Form-Demo/HookFormDemo';
 // import FormikSpreadApproach from './formik-validation/formik-spreadApproach';
@@ -206,7 +208,9 @@ function App() {
       {/* <DataBindingClassComp/> */}
       {/* <StateInClass/> */}
       {/* <SetStateAtMount/> */}
-      <ClassAndStyleBinding/>
+      {/* <ClassAndStyleBinding/> */}
+      <EventMethodBindingError/>
+      {/* <EventMethodBinding/> */}
     </>
   );
 }
