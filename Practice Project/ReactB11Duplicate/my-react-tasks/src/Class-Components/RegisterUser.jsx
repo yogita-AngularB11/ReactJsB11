@@ -11,6 +11,7 @@ export default class RegisterUser extends Component {
     return (
       <div>
         <h3>Registered User</h3>
+        <p>I am testing git pull command.I have made changes in file on remote repository i will pull them to local repo</p>
       </div>
     )
   }
