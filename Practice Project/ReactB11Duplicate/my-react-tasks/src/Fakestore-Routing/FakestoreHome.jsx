@@ -16,10 +16,12 @@ const FakestoreHome = () => {
       <h2>FakeStore Home</h2>
 
       <ul className='list-unstyled '>
-        { 
+        {
           categories.map(category =>
             <li key={category} >
-              <Link to={`/products/${category}`} className='text-decoration-none btn btn-dark w-25 my-2' >{category.toUpperCase()}</Link>
+              <Link to={`/products/${category}`} className='text-decoration-none btn btn-dark w-25 my-2' >
+                {category.toUpperCase()}
+              </Link>
             </li>)
         }
         <li><Link to='/login' className='btn btn-warning w-25 text-decoration-none my-2 '>USER LOGIN</Link></li>

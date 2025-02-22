@@ -13,7 +13,7 @@ const FakestoreProducts = () => {
       .then(response => {
         setProducts(response.data)
       })
-  },[])
+  })
 
   return (
     <div>
