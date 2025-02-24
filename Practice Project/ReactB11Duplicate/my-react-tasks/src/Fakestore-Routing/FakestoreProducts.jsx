@@ -37,6 +37,8 @@ const FakestoreProducts = () => {
         </div>
         <div className="col-8">
           <Outlet />
+          {/* React can support multiple outlets Angular cannot */}
+          {/* <Outlet/> */}
         </div>
 
       </div>
