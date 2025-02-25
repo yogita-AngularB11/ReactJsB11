@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
-import { Link, Outlet, useParams,useNavigate } from 'react-router-dom'
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react'
+import { Link, Outlet, useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import { useCookies } from 'react-cookie'
 
@@ -9,17 +8,18 @@ const FakestoreProducts = () => {
 
   const [products, setProducts] = useState([{ id: 0, title: '', image: '', description: '', category: '', rating: { rate: 0, count: 0 } }])
 
-   const [cookies, setCookies, removeCookie] = useCookies(['userid']);
+  const [cookies, setCookies, removeCookie] = useCookies(['userid']);
 
-   const navigate=useNavigate();
+  const navigate = useNavigate();
+
   useEffect(() => {
-    if(cookies['userid']){
-    axios.get(`https://fakestoreapi.com/products/category/${params.category}`)
-      .then(response => {
-        setProducts(response.data)
-      })
+    if (cookies['userid']) {
+      axios.get(`https://fakestoreapi.com/products/category/${params.category}`)
+        .then(response => {
+          setProducts(response.data)
+        })
     }
-    else{
+    else {
       navigate('/login')
     }
   })

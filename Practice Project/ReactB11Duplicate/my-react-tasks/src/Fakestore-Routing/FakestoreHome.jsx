@@ -8,8 +8,8 @@ const FakestoreHome = () => {
 
   const [cookies, setCookies, removeCookie] = useCookies(['userid']);
 
-  const navigate=useNavigate();
-  
+  const navigate = useNavigate();
+
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/categories/`)
       .then(response => {
@@ -17,13 +17,16 @@ const FakestoreHome = () => {
       })
   }, [])
 
-  function handleSignout(){
+  function handleSignout() {
     removeCookie('userid')
     navigate('/login')
   }
   return (
     <div>
-      <h2 className='d-flex justify-content-between'> <span> FakeStore Home</span> <span>{cookies['userid']}</span></h2>
+      {/* To display who logged in,we collect the data from cookie */}
+      <h2 className='d-flex justify-content-between'>
+        <span> FakeStore Home</span> <span className='text-primary'>{cookies['userid']}</span>
+      </h2>
 
       <ul className='list-unstyled '>
         {
@@ -34,8 +37,12 @@ const FakestoreHome = () => {
               </Link>
             </li>)
         }
+
+        {/* conditional rendering : if cookie is already their then user is already logged-in then it should display logout button */}
         {
-          (cookies['userid'])?<button onClick={handleSignout} className='btn btn-danger w-25'>Signout</button>:<li><Link to='/login' className='btn btn-warning w-25 text-decoration-none my-2 '>USER LOGIN</Link></li>
+          (cookies['userid']) ?
+            <button onClick={handleSignout} className='btn btn-danger w-25'>Signout</button> :
+            <li><Link to='/login' className='btn btn-warning w-25 text-decoration-none my-2'>USER LOGIN</Link></li>
         }
       </ul>
 
