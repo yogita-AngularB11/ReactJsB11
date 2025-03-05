@@ -4,8 +4,11 @@ import FakestoreHome from './FakestoreHome'
 import FakestoreProducts from './FakestoreProducts'
 import FakestoreDetails from './FakestoreDetails'
 import FakestoreLogin from './FakestoreLogin'
+import AddCategory from '../video-library/add-category'
+
 
 const FakestoreIndex = () => {
+   
     return (
         <div className='container-fluid'>
             <BrowserRouter>
@@ -31,6 +34,7 @@ const FakestoreIndex = () => {
                         <Route path='products/:category' element={<FakestoreProducts />} >
                             <Route path='details/:id' element={<FakestoreDetails />} />
                         </Route>
+                        <Route path='add-category' element={<AddCategory/>}/>
                         <Route path='login' element={<FakestoreLogin />}/>
                         <Route path='*' element={
                             <div className='text-danger fs-4'>

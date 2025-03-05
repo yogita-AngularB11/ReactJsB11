@@ -7,6 +7,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 import { CookiesProvider } from 'react-cookie';
 import FakestoreIndex from './Fakestore-Routing/fakestore-index'
+import AddCategory from './video-library/add-category';
 
 
 
@@ -16,6 +17,7 @@ root.render(
     <CookiesProvider>
       {/* <App /> */}
       <FakestoreIndex />
+      {/* <AddCategory/> */}
     </CookiesProvider>
   </React.StrictMode>
 );

@@ -20,7 +20,7 @@ import './App.css';
 // import FormDemo from './form-demo/form-demo';
 // import FormikDemo from './formik-demo/formik-demo';
 // import FakestoreCarousel from './fakestore-carousel/fakestore-carousel';
-// import AddCategory from './video-library/add-category';
+import AddCategory from './video-library/add-category';
  import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Details from './Details/Details';
 // import FakestoreIndex from './Fakestore-Routing/fakestore-index';
@@ -203,7 +203,7 @@ function App() {
     //   {/* <KeyDemo/> */}
     //   {/* <TimeoutDemo/> */}
     //   {/* <FakestoreIndex /> */}
-    //   {/* <AddCategory/> */}
+     <AddCategory/> 
     //   {/* <ControlledDemo/> */}
     //   {/* <StorageDemo/> */}
     //   {/* <DataBindingClassComp/> */}

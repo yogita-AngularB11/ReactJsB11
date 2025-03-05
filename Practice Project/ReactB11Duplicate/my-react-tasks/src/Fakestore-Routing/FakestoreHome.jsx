@@ -4,14 +4,16 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useCookies } from 'react-cookie'
 
 const FakestoreHome = () => {
-  const [categories, setCategories] = useState([])
+  // const [categories, setCategories] = useState([])
+  const [categories, setCategories] = useState([{CategoryId:0,CategoryName:''}])
 
   const [cookies, setCookies, removeCookie] = useCookies(['userid']);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`https://fakestoreapi.com/products/categories/`)
+    // axios.get(`https://fakestoreapi.com/products/categories/`)
+    axios.get('http://127.0.0.1:4000/categories')
       .then(response => {
         setCategories(response.data);
       })
@@ -31,9 +33,10 @@ const FakestoreHome = () => {
       <ul className='list-unstyled '>
         {
           categories.map(category =>
-            <li key={category} >
-              <Link to={`/products/${category}`} className='text-decoration-none btn btn-dark w-25 my-2' >
-                {category.toUpperCase()}
+            <li key={category.CategoryId} >
+              <Link to={`/products/${category}`} className='text-decoration-none btn btn-dark w-25 my-2'>
+
+                {category.CategoryName.toUpperCase()}
               </Link>
             </li>)
         }
